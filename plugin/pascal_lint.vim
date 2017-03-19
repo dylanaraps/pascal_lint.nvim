@@ -1,10 +1,10 @@
 "=============================================================
-" FILE: pascal_lint.vim
-" AUTHOR:  Dylan Araps <dylan.araps at gmail.com>
-" License: MIT license
+" file: pascal_lint.vim
+" author:  dylan araps <dylan.araps at gmail.com>
+" license: mit license
 "=============================================================
 
-if exists("g:loaded_pascal_lint") || !has('nvim')
+if exists('g:loaded_pascal_lint') || !has('nvim')
     finish
 endif
 let g:loaded_pascal_lint = 1

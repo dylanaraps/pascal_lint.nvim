@@ -9,10 +9,10 @@ let g:pascal_lint#split = get(g:, 'pascal_lint#split', '5new')
 
 function! pascal_lint#RunFPC()
     " List of lines to exclude from the output.
-    let grep = '| grep -v "^Free Pascal\|^Copyright\|^Compiling\|^Target OS\|returned an error exitcode\|Compilation aborted"'
+    let l:grep = '| grep -v "^Free Pascal\|^Copyright\|^Compiling\|^Target OS\|returned an error exitcode\|Compilation aborted"'
 
     " Save the current filename since we can't get it once we split.
-    let file = expand('%:p')
+    let l:file = expand('%:p')
 
     " Delete previous 'fpc' instance.
     silent! bd! fpc_term
@@ -21,7 +21,7 @@ function! pascal_lint#RunFPC()
     execute g:pascal_lint#split
 
     " Run 'fpc'.
-    call termopen("fpc " . g:pascal_lint#args . " '" . file . "' 2>/dev/null " . grep)
+    call termopen('fpc ' . g:pascal_lint#args . ' "' . l:file . '" 2>/dev/null ' . l:grep)
 
     " Rename the buffer so we can replace it later.
     file fpc_term
