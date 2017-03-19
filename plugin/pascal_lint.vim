@@ -2,7 +2,7 @@
 " by Dylan Araps
 
 if exists("g:loaded_pascal_lint")
-	finish
+    finish
 endif
 let g:loaded_pascal_lint = 1
 
