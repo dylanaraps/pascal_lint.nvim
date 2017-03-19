@@ -56,5 +56,5 @@ What size split to create.
 
 ```viml
 " Default
-let g:pascal_lint#split = '10new'
+let g:pascal_lint#split = '5new'
 ```
