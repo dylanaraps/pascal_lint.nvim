@@ -1,0 +1,49 @@
+*pascal_lint.txt* Show fpc compiler output in a neovim split.
+
+Version: 0.1
+Author:  Dylan Araps <dylan.araps at gmail.com>
+License: MIT license
+
+CONTENTS					    *pascal_lint-contents*
+
+Introduction		    |pascal_lint-introduction|
+Usage			        |pascal_lint-usage|
+Configuration Examples	|pascal_lint-options|
+
+==============================================================================
+INTRODUCTION					*pascal_lint-introduction*
+
+*pascal_lint* is a simple plugin to call fpc (Free Pascal Compiler) and display the output of the compilation to the user asynchronously. There aren't any linting options for Pascal apart from using the Lazarus IDE so this is a good enough compromise.
+
+Note: This makes use of Neovim's terminal splits. The plugin won't work in regular vim.
+
+==============================================================================
+USAGE						    *pascal_lint-usage*
+
+Run fpc on the current file and display the compiler output in a split below.
+
+>
+    :FPC
+<
+
+Compile on save.
+
+>
+    autocmd BufWritePost *.pas :FPC
+<
+
+==============================================================================
+OPTIONS					        *pascal_lint-options*
+
+Which arguments to pass to fpc.
+
+>
+    " Default
+    let g:pascal_lint#args = '-S2'
+<
+
+What size split to create.
+
+>
+    " Default
+    let g:pascal_lint#split = '5new'
