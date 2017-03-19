@@ -1,15 +1,13 @@
 # pascal_lint.nvim
 
-This is a simple plugin to call `fpc` (Free Pascal Compiler) and display the output of the compilation to the user asynchronously.
-
-There aren't any linting options for Pascal apart from using the Lazarus IDE so this is a good enough compromise.
+This is a simple plugin to call `fpc` (Free Pascal Compiler) and display the output of the compilation to the user asynchronously. There aren't any linting options for Pascal apart from using the Lazarus IDE so this is a good enough compromise.
 
 Note: This makes use of Neovim's terminal splits. The plugin won't work in regular vim.
 
 
-## Requirements
+## Dependencies
 
-- `fpc` must be in your `$PATH`.
+- `fpc`
 - `neovim`
 
 
