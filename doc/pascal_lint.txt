@@ -1,6 +1,6 @@
 *pascal_lint.txt* Show fpc compiler output in a neovim split.
 
-Version: 0.1
+Version: 0.1.0
 Author:  Dylan Araps <dylan.araps at gmail.com>
 License: MIT license
 
