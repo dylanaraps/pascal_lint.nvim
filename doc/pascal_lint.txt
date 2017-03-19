@@ -49,5 +49,6 @@ Which arguments to pass to fpc.
 What size split to create.
 
 >
- 0.1.0   " Default
+    " Default
     let g:pascal_lint#split = '5new'
+<
